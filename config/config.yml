@@ -4,4 +4,4 @@ api_url: https://api.telegram.org/bot
 
 commands:
     test:
-        text: TelegramBot
+        text: TelegramBot is working!

@@ -31,6 +31,9 @@ class Bot
     {
         $commands = explode(' ',$this->_request->message->text);
         $command = substr($commands[0],1);
-        return $command;
+        if (isset($this->_config['commands'][$command]))
+            return $command;
+        else
+            return 'The command is not exists.';
     }
 }
