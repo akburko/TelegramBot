@@ -11,7 +11,7 @@ $log->pushHandler(new StreamHandler(__DIR__.'/logs/info.log', Logger::INFO));
 
 $tb = new Bot();
 
-$log->info($tb->getRequest());
+$log->info('Данные запроса', $tb->getRequest());
 
 
 

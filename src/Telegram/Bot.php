@@ -14,7 +14,7 @@ class Bot
     {
         $this->_config = Yaml::parse(file_get_contents(__DIR__.'/../../config/config.yml'));
         $this->_api_url = $this->_config['api_url'] . $this->_config['bot_token'];
-        $this->_request = file_get_contents('php://input');
+        $this->_request = json_decode(file_get_contents('php://input'));
     }
 
     public function getApiURL()
