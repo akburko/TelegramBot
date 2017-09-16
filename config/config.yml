@@ -5,3 +5,14 @@ api_url: https://api.telegram.org/bot
 commands:
     test:
         text: TelegramBot is working!
+        description: Команда для тестирования сервиса
+        type: Text
+    user:
+        description: Команда получения информации о пользователе.
+        template: /user номер_договора
+        example: /user 70001
+        number_parameters: 1
+        url: http://localhost/api2/web/account
+        ping: http://localhost/api2/web/status
+        type: URL
+
