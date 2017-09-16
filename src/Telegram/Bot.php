@@ -26,4 +26,10 @@ class Bot
     {
         return $this->_request;
     }
+
+    public function execCommand()
+    {
+        $command = explode(' ',$this->_request->message->text);
+        return $command[0];
+    }
 }
