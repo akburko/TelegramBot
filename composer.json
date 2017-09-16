@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "symfony/yaml": "3.3.*",
+    "symfony/yaml": "^2.8",
     "monolog/monolog": "^1.23"
   },
   "autoload": {
