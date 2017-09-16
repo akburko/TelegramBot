@@ -1,0 +1,7 @@
+.idea/
+/logs/info.log
+composer.lock
+/composer.phar
+
+
+

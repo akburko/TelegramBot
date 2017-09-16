@@ -1,0 +1,7 @@
+bot_token: 352422663:AAE0uS1dc06kna8Nz9P8jidrU8wqsUKOAS8
+
+api_url: https://api.telegram.org/bot
+
+commands:
+    test:
+        text: TelegramBot

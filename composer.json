@@ -1,0 +1,22 @@
+{
+  "name": "akburko/TelegramBot",
+  "type": "library",
+  "description": "Bot of Telegram",
+  "keywords": ["telegram", "telegrambot"],
+  "homepage": "http://kalartelecom.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Burko",
+      "email": "akb.ktk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "symfony/yaml": "3.3.*",
+    "monolog/monolog": "^1.23"
+  },
+  "autoload": {
+    "psr-0": { "Telegram": "src/" }
+  }
+}
