@@ -29,7 +29,8 @@ class Bot
 
     public function execCommand()
     {
-        $command = explode(' ',$this->_request->message->text);
-        return $command[0];
+        $commands = explode(' ',$this->_request->message->text);
+        $command = substr($commands[0],1);
+        return $command;
     }
 }
