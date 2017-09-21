@@ -35,10 +35,10 @@ class Bot
         $commands = explode(' ',$this->_request->message->text);
         $command = substr($commands[0],1);
         if (isset($this->_config['commands'][$command]))
-            return $this->_client->get($this->_api_url . 'sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $this->_config['commands'][$command]['text'])));
+            $text = $this->_config['commands'][$command]['text'];
         else
-            return 'The command is not exists.';
+            $text = $this->_config['commands']['404']['text'];
+        return $this->_client->get($this->_api_url . 'sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $text)));
     }
-
 
 }

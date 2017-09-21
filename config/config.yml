@@ -15,6 +15,12 @@ commands:
         url: http://localhost/api2/web/account
         ping: http://localhost/api2/web/status
         type: URL
+        commands:
+            create:
+                url:
+                fields:
+    404:
+        text: Команда не найдена!
 
 agreements:
     new_number:
