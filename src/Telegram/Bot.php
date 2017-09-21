@@ -35,7 +35,8 @@ class Bot
         $commands = explode(' ',$this->_request->message->text);
         $command = substr($commands[0],1);
         if (isset($this->_config['commands'][$command]))
-            return $this->_client->get('sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $this->_config['commands'][$command]['text'])));
+            //return $this->_client->get('sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $this->_config['commands'][$command]['text'])));
+            return $this->_request->message->chat->id;
         else
             return 'The command is not exists.';
     }
