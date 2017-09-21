@@ -17,7 +17,7 @@ class Bot
         $this->_config = Yaml::parse(file_get_contents(__DIR__.'/../../config/config.yml'));
         $this->_api_url = $this->_config['api_url'] . $this->_config['bot_token'] . '/';
         $this->_request = json_decode(file_get_contents('php://input'));
-        $this->_client = new Client(['base_uri' => $this->_api_url]);
+        $this->_client = new Client();
     }
 
     public function getApiURL()
@@ -35,8 +35,7 @@ class Bot
         $commands = explode(' ',$this->_request->message->text);
         $command = substr($commands[0],1);
         if (isset($this->_config['commands'][$command]))
-            //return $this->_client->get('sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $this->_config['commands'][$command]['text'])));
-            return $this->_request->message->chat->id;
+            return $this->_client->get($this->_api_url . 'sendMessage', array('json' => array('chat_id' => $this->_request->message->chat->id, "text" => $this->_config['commands'][$command]['text'])));
         else
             return 'The command is not exists.';
     }
