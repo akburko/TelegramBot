@@ -16,3 +16,19 @@ commands:
         ping: http://localhost/api2/web/status
         type: URL
 
+agreements:
+    new_number:
+        - {key: 2, description: "Новая Чара, Удокан", query: 'select number + 1 from `agreements` WHERE LEFT(number,1)=2 AND state=0 AND number < 28888 ORDER BY number DESC LIMIT 1'}
+        - {key: 7, description: "Куанда", query: 'select number + 1 from `agreements` WHERE LEFT(number,1)=7 AND state=0 ORDER BY number DESC LIMIT 1'}
+
+security:
+    administrators:
+        '427997461': 'Техподдержка'
+        '238433653': 'Александр Бурко'
+        '322978806': 'Иван'
+        '255239781': 'Анна Вейс'
+        '247600037': 'Владислав Иванов'
+        '272313777': 'VitalyV'
+        '290937691': 'Khaustov'
+
+
