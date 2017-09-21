@@ -11,6 +11,6 @@ $log->pushHandler(new StreamHandler(__DIR__.'/logs/info.log', Logger::INFO));
 
 $tb = new Bot();
 
-$log->info('Данные запроса', (array) $tb->getRequest());
+$log->info('Входящий запрос =', (array) $tb->getRequest());
 
-$log->info('Команда='.$tb->execCommand());
+$log->info('Результат ответа ='.$tb->execCommand());
